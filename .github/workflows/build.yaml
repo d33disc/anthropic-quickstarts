@@ -36,7 +36,7 @@ jobs:
       contents: read
       packages: write
   merge:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs:
       - build-arm64
       - build-amd64

@@ -12,7 +12,7 @@ on:
       - computer-use-demo/**
 jobs:
   ruff:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     defaults:
       run:
         working-directory: computer-use-demo
@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/ruff-action@v1
   pyright:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     defaults:
       run:
         working-directory: computer-use-demo
@@ -37,7 +37,7 @@ jobs:
       - run: echo "$PWD/.venv/bin" >> $GITHUB_PATH
       - uses: jakebailey/pyright-action@v1
   pytest:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     defaults:
       run:
         working-directory: computer-use-demo
